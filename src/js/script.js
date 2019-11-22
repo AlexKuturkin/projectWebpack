@@ -1,5 +1,3 @@
-import "./style.css";
-
 // Переменные
 const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort4' : 'https://praktikum.tk/cohort4'
 const myAuthorization = "7f9b7c8f-ccda-43f0-a53e-53dd5ff0c34d";
@@ -303,30 +301,6 @@ doApi.getUserInfo();
 /* Вызов метода получения карточек с сервера */
 doApi.getInitialCards();
 
-
-// Функции
-/* Функция проверки валидации в инпутах*/
-function handleValidate(event) {
-    event.target.parentNode.classList.remove("form_is-invalid");
-    event.target.textContent = "";
-    validate(event.target);
-  }
-  
-  /* Функция валидации */
-  function validate(element) {
-    const errorElement = document.querySelector(`#error-${element.id}`);
-  
-    if (element.value.length == 0) {
-      errorElement.textContent = "Это обязательное поле";
-      element.parentNode.classList.add("form_is-invalid");
-      return false;
-    } else if (element.value.length < 2) {
-      errorElement.textContent = "Должно быть от 2 до 30 символов";
-      element.parentNode.classList.add("form_is-invalid");
-      return false;
-    }
-    return true;
-  }
 
 /**
  * Здравствуйте.

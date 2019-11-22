@@ -1,0 +1,8 @@
+@import url(./__image/popuper__image.css);
+@import url(./__close/popuper__close.css);
+@import url(./_is-opened/popuper_is-opened.css);
+
+.popuper {
+  display: none;
+}
+
