@@ -39,6 +39,8 @@ addButton.addEventListener("click", function() {
 const popUpClose = document.querySelector(".popup__close");
 popUpClose.addEventListener("click", function() {
   changePopup.close(popUpNewCard);
+  nameForm.value = '';
+  linkForm.value = '';
 });
 
 /* Обработчик открытия окна редактирования*/
