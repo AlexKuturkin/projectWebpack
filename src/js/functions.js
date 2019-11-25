@@ -1,13 +1,11 @@
-// Функции
 /* Функция проверки валидации в инпутах*/
-function handleValidate(event) {
+export function handleValidate(event) {
     event.target.parentNode.classList.remove("form_is-invalid");
     event.target.textContent = "";
     validate(event.target);
   }
-  
   /* Функция валидации */
-  function validate(element) {
+  export function validate(element) {
     const errorElement = document.querySelector(`#error-${element.id}`);
   
     if (element.value.length == 0) {
